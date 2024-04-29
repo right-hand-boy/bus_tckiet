@@ -1,0 +1,586 @@
+<!DOCTYPE >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Efficiently manage and process KMB bus ticket checking and retrieval with our streamlined solution."
+    />
+    <link rel="icon" type="image/png" href="./image/logo.png" />
+    <!-- Replace favicon.png with your favicon image file -->
+    <link href="bus-station.css" rel="stylesheet" />
+    <title>KMB Bus Ticket</title>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <div class="navi">
+          <div class="header">
+            <svg class="menu-icon">
+              <use class="icon-menu" xlink:href="icons.svg#icon-menu"></use>
+            </svg>
+            <a class="logo">KMB</a>
+            <nav>
+              <ul class="navigation primary">
+                <li>
+                  <svg class="icon-login">
+                    <use xlink:href="icons.svg#icon-log-in"></use>
+                  </svg>
+                  <a class="login"> login</a>
+                </li>
+                <li>
+                  <svg>
+                    <use
+                      class="icon-address"
+                      xlink:href="icons.svg#icon-user-plus"
+                    ></use>
+                  </svg>
+                  <a class="signup">sign up</a>
+                </li>
+              </ul>
+              <ul class="sign-in hidden">
+                <p class="user-name"></p>
+                <p class="user-"></p>
+                <li class="log-out">log out</li>
+              </ul>
+            </nav>
+          </div>
+          <div class="headding-con">
+            <nav class="navigation-secondary">
+              <ul class="nav">
+                <li class="nav-home">home</li>
+                <li class="nav-available hidden">/ View all reserved seats</li>
+                <li class="nav-reserve hidden">/ Reserve a seat</li>
+                <li class="nav-info hidden">/ confirm personal-information</li>
+              </ul>
+              <ul class="naa">
+                <li class="reserve1">Reserve a seat</li>
+                <li class="see-available1">View all reserved seats</li>
+                <li class="contact">contact</li>
+                <li class="About">about</li>
+              </ul>
+              <ul class="main-page hidden">
+                <button class="close-modal">
+                  <svg class="icon-close">
+                    <use xlink:href="icons.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <li class="headding">KMB bus station</li>
+                <li class="reserve">Reserve a seat</li>
+                <li class="see-available">View all reserved seats</li>
+                <li class="">contact</li>
+                <li class="nav-about">about</li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <div class="overlayer hidden"></div>
+      <section>
+        <div class="modal hidden">
+          <div class="container">
+            <button class="close-modal2">
+              <svg class="icon-close">
+                <use xlink:href="icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <form class="modal-form" action="none">
+              <div>
+                <label for="full-name-input">Name</label>
+                <input
+                  id="full-name-input"
+                  type="text"
+                  placeholder="Full Name"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="email-input">Email address</label>
+                <input
+                  id="email-input"
+                  type="email"
+                  placeholder="me@kmb.com"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="password-input">Password</label>
+                <input
+                  id="password-input"
+                  type="text"
+                  placeholder="password"
+                  required
+                />
+              </div>
+              <div>
+                <label for="confirm-password-input">Confirm Password</label>
+                <input
+                  id="confirm-password-input"
+                  type="text"
+                  placeholder="confirm password"
+                  required
+                />
+              </div>
+
+              <p class="message message-sig"></p>
+
+              <button class="shopping-btn signin-btn">Sign up now</button>
+            </form>
+          </div>
+        </div>
+        <div class="modal1 hidden">
+          <div class="container">
+            <button class="close-modal1">
+              <svg class="icon-close">
+                <use xlink:href="icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <form class="modal-form" action="none">
+              <div>
+                <label for="login-email">Email address</label>
+                <input
+                  id="login-email"
+                  type="email"
+                  placeholder="me@kmb.com"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="login-password">Password</label>
+                <input
+                  id="login-password"
+                  type="text"
+                  placeholder="password"
+                  required
+                />
+              </div>
+              <p class="message message-log"></p>
+              <button class="shopping-btn login-btn">login</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="to-reserve hidden">
+        <form>
+          <div>
+            <label for="name">full name</label>
+            <input type="text" id="name" placeholder="full name" required />
+          </div>
+          <div>
+            <label name="date" for="date">enter the date</label>
+            <input
+              type="date"
+              id="date"
+              placeholder="month/day/year"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="select-start">choose your starting place</label>
+            <select id="select-start" class="select-start" required>
+              <option value="">starting place</option>
+              <option class="start-1" value="adama">adama</option>
+              <option class="start-2" value="Addis abeba">Addis abeba</option>
+              <option class="start-3" value="adigrat">adigrat</option>
+              <option class="start-4" value="ambo">ambo</option>
+              <option class="start-5" value="asosa">asosa</option>
+              <option class="start-6" value="Bahir dar">Bahir dar</option>
+              <option class="start-7" value="debre brehan">debre brehan</option>
+              <option class="start-8" value="debre markos">debre markos</option>
+              <option class="start-9" value="debre tabor">debre tabor</option>
+              <option class="start-10" value="dese">dese</option>
+              <option class="start-11" value="Gondar">Gondar</option>
+              <option class="start-12" value="hawassa">hawassa</option>
+              <option class="start-13" value="jima">jima</option>
+              <option class="start-14" value="mekele">mekele</option>
+              <option class="start-15" value="nekemte">nekemte</option>
+              <option class="start-16" value="shashemen">shashemen</option>
+              <option class="start-17" value="wolayita">wolayita</option>
+              <option class="start-18" value="woldiya">woldiya</option>
+              <option class="start-19" value="wollo">wollo</option>
+            </select>
+          </div>
+          <div>
+            <select id="select-destiny" class="select-destiny" required>
+              <option value="">destination</option>
+              <option class="destiny-1" value="adama">adama</option>
+              <option class="destiny-2" value="Addis abeba">Addis abeba</option>
+              <option class="destiny-3" value="adigrat">adigrat</option>
+              <option class="destiny-4" value="ambo">ambo</option>
+              <option class="destiny-5" value="asosa">asosa</option>
+              <option class="destiny-6" value="Bahir dar">Bahir dar</option>
+              <option class="destiny-7" value="debre brehan">
+                debre brehan
+              </option>
+              <option class="destiny-8" value="debre markos">
+                debre markos
+              </option>
+              <option class="destiny-9" value="debre tabor">debre tabor</option>
+              <option class="destiny-10" value="dese">dese</option>
+              <option class="destiny-11" value="Gondar">Gondar</option>
+              <option class="destiny-12" value="hawassa">hawassa</option>
+              <option class="destiny-13" value="jima">jima</option>
+              <option class="destiny-14" value="mekele">mekele</option>
+              <option class="destiny-15" value="nekemte">nekemte</option>
+              <option class="destiny-16" value="shashemen">shashemen</option>
+              <option class="destiny-17" value="wolayita">wolayita</option>
+              <option class="destiny-18" value="woldiya">woldiya</option>
+              <option class="destiny-19" value="wollo">wollo</option>
+            </select>
+          </div>
+          <div>
+            <label for="id"
+              >enter your identification card/passport number</label
+            >
+            <input type="text" id="id" required />
+          </div>
+          <div>
+            <label for="seat">seat number</label>
+            <input type="number" id="seat" placeholder="between1-30" required />
+          </div>
+          <p class="seat-number"></p>
+        </form>
+        <div>
+          <button class="btn btn--ticket">get a ticket</button>
+        </div>
+      </section>
+      <section class="user hidden">
+        <div class="user-details">
+          <div class="p">
+            <p>name</p>
+            <p class="info passenger-name"></p>
+          </div>
+          <div class="p">
+            <p>seat number</p>
+            <p class="info user-seat"></p>
+          </div>
+          <div class="p">
+            <p>starting place</p>
+            <p class="info user-start"></p>
+          </div>
+          <div class="p">
+            <p>destination</p>
+            <p class="info user-destiny"></p>
+          </div>
+          <div class="p">
+            <p>date</p>
+            <p class="info user-date"></p>
+          </div>
+          <div class="p">
+            <p>identification card/passport number</p>
+            <p class="info user-id"></p>
+          </div>
+          <div class="p">
+            <p>fee</p>
+            <p>birr <span class="info user-fee"> 1222.54</span></p>
+          </div>
+
+          <div class="p">
+            <p>conifrmation code</p>
+            <p>KN<span class="info user-conifermation"></span></p>
+          </div>
+          <div class="p">
+            <p>payment code</p>
+            <p>MB<span class="info user-payment-code"></span></p>
+          </div>
+          <p class="caution">please take a screenshot or print out the page</p>
+          <a class="btn finish">confirm</a>
+        </div>
+      </section>
+      <section class="aboutt hidden">
+        <div class="head">
+          <h4>creating thr future</h4>
+          <p>your new exprience,your new friend</p>
+          <button>learn more</button>
+        </div>
+        <div class="b">
+          <div class="ppp">
+            <h2>Sports Car</h2>
+            <div class="infoo">
+              <p>
+                What is a sports car? A car may be a sporting automobile without
+                being a sports car.
+              </p>
+              <p>
+                A sports car, or sportscar, is a small, usually two-seater,
+                two-door automobile designed for spirited performance and nimble
+                handling. The term "sports car" was used in The Times, London in
+                1919. According to USA's Merriam-Webster dictionary, USA's first
+                known use of the term was in 1928. Sports cars started to become
+                popular during the 1920s.
+              </p>
+              <p>
+                Sports cars may be spartan or luxurious, but high
+                maneuverability and light weight are requisite. Sports cars are
+                usually aerodynamically shaped (since the 1950s), and have a low
+                center of gravity compared to standard models. Steering and
+                suspension are typically designed for precise control at high
+                speeds.Traditionally sports cars were open roadsters, but closed
+                coupés also started to become popular during the 1930s, and the
+                distinction between a sports car and a grand tourer is not
+                absolute.
+              </p>
+            </div>
+          </div>
+          <div class="pp">
+            <h2>Seating Layout</h2>
+            <div class="infoo">
+              <p>Traditional sports cars were typically two-seat roadsters.</p>
+              <p>
+                Although the first sports cars were derived from fast tourers,
+                and early sporting regulations often demanded four seats (even
+                three-seaters were often produced by coachbuilders), two seats
+                became common from about the mid-1920s. Modern sports cars may
+                also have small back seats that are often really only suitable
+                for luggage or small children; such a configuration is referred
+                to as a 2+2 (two full seats + two "occasional" seats).
+              </p>
+              <p>
+                Over the years, some manufacturers of sports cars have sought to
+                increase the practicality of their vehicles by increasing the
+                seating room. One method is to place the driver's seat in the
+                center of the car, which allows two full-sized passenger seats
+                on each side and slightly behind the driver. The arrangement was
+                originally considered for the Lamborghini Miura, but abandoned
+                as impractical because of the difficulty for the driver to
+                enter/exit the vehicle. McLaren used the design in their F1.
+              </p>
+            </div>
+          </div>
+        </div>
+        <section class="footer">
+          <footer>
+            <a class="logo">KMB</a> Coayright &copy; 2027 by KMB,All rights
+            reserved.
+          </footer>
+          <nav class="fo">
+            <a href="main.html" class="us-header">About</a>
+            <a href="3">privacy aolicy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#"> News</a>
+            <a href="#">Events</a>
+          </nav>
+          <nav class="fo">
+            <a a href="#" class="us-header">Get Involved</a>
+            <a a href="#">Work with Us</a>
+            <a a href="#">Subscribe for Newsletter</a>
+            <a a href="#">Forum</a>
+          </nav>
+          <nav class="fo">
+            <a a href="#" class="us-header">Hela Center</a>
+            <a a href="#">FAQs</a>
+            <a a href="#">Contact Us</a>
+            <a a href="#">How to Start a Challenge</a>
+          </nav>
+          <nav class="fo">
+            <a a href="#" class="us-header">Social</a>
+          </nav>
+        </section>
+      </section>
+      <section class="home-page">
+        <section class="hero">
+          <div class="hero-box">
+            <div>
+              <h1>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam
+                assumenda obcaecati iste voluptate
+              </h1>
+              <p class="header-info">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Inventore reiciendis officiis ullam excepturi libero. Beatae, ut
+                ab, natus asperiores odit cupiditate maxime dolor omnis placeat
+                facere quod soluta similique hic!
+              </p>
+            </div>
+          </div>
+          <div class="hero-img-box">
+            <img class="img" src="./image/r.png" />
+          </div>
+        </section>
+        <section class="feauterd-prici-container">
+          <div class="about">
+            <h2 class="primary-heading">KMB online market</h2>
+            <p class="about-info">
+              KMB online market is Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Necessitatibus quidem recusandae cum fugit sint,
+              deserunt ab reprehenderit inventore soluta cumque incidunt rem
+              ullam iusto delectus et, fuga blanditiis commodi vel!
+            </p>
+            <p class="about-info">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+              voluptas quidem voluptatum alias eos aliquid architecto autem
+              nesciunt amet voluptatibus! Sequi rem nulla numquam, quo quia
+              dolorem eaque atque deserunt!
+            </p>
+          </div>
+          <div class="feauterd-prici">
+            <div class="prici">
+              <h2 class="secondary-heading">easy payment method using</h2>
+              <div class="pric-img-box">
+                <img class="pric-img" src="./image/tele.jpg" />
+                <img class="pric-img" src="./image/abys.jpg" />
+                <img class="pric-img" src="./image/awa.jpg" />
+                <img class="pric-img" src="./image/tele.jpg" />
+                <img class="pric-img" src="./image/abys.jpg" />
+                <img class="pric-img" src="./image/awa.jpg" />
+                <img class="pric-img" src="./image/tele.jpg" />
+                <img class="pric-img" src="./image/abys.jpg" />
+                <img class="pric-img" src="./image/awa.jpg" />
+              </div>
+            </div>
+            <div class="feau">
+              <h2 class="secondary-heading">works with</h2>
+              <div class="feau-logo">
+                <img class="pric-img" src="./image/tele.jpg" />
+                <img class="pric-img" src="./image/abys.jpg" />
+                <img class="pric-img" src="./image/awa.jpg" />
+                <img class="pric-img" src="./image/tele.jpg" />
+                <img class="pric-img" src="./image/abys.jpg" />
+                <img class="pric-img" src="./image/awa.jpg" />
+                <img class="pric-img" src="./image/tele.jpg" />
+                <img class="pric-img" src="./image/abys.jpg" />
+                <img class="pric-img" src="./image/awa.jpg" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="footer">
+          <footer>
+            <a class="logo">KMB</a> Coayright &copy; 2027 by KMB,All rights
+            reserved.
+          </footer>
+          <nav class="fo">
+            <a href="main.html" class="us-header">About</a>
+            <a href="3">privacy aolicy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#"> News</a>
+            <a href="#">Events</a>
+          </nav>
+          <nav class="fo">
+            <a a href="#" class="us-header">Get Involved</a>
+            <a a href="#">Work with Us</a>
+            <a a href="#">Subscribe for Newsletter</a>
+            <a a href="#">Forum</a>
+          </nav>
+          <nav class="fo">
+            <a a href="#" class="us-header">Hela Center</a>
+            <a a href="#">FAQs</a>
+            <a a href="#">Contact Us</a>
+            <a a href="#">How to Start a Challenge</a>
+          </nav>
+          <nav class="fo">
+            <a a href="#" class="us-header">Social</a>
+          </nav>
+        </section>
+      </section>
+      <div class="list hidden">
+        <div class="list-con">
+          <p class="select-reserved-start">to see resered-seat</p>
+          <!-- <p class="sort">sort&dArr;</p> -->
+          <form class="select-resered">
+            <label for="select-reserved-start">from</label>
+            <select
+              id="select-reserved-start"
+              class="select-reserved-start"
+              required
+            >
+              <option value="">choose starting place</option>
+              <option class="reserved-start-1" value="adama">adama</option>
+              <option class="reserved-start-2" value="Addis abeba">
+                Addis abeba
+              </option>
+              <option class="reserved-start-3" value="adigrat">adigrat</option>
+              <option class="reserved-start-4" value="ambo">ambo</option>
+              <option class="reserved-start-5" value="asosa">asosa</option>
+              <option class="reserved-start-6" value="Bahir dar">
+                Bahir dar
+              </option>
+              <option class="reserved-start-7" value="debre brehan">
+                debre brehan
+              </option>
+              <option class="reserved-start-8" value="debre markos">
+                debre markos
+              </option>
+              <option class="reserved-start-9" value="debre tabor">
+                debre tabor
+              </option>
+              <option class="reserved-start-10" value="dese">dese</option>
+              <option class="reserved-start-11" value="Gondar">Gondar</option>
+              <option class="reserved-start-12" value="hawassa">hawassa</option>
+              <option class="reserved-start-13" value="jima">jima</option>
+              <option class="reserved-start-14" value="mekele">mekele</option>
+              <option class="reserved-start-15" value="nekemte">nekemte</option>
+              <option class="reserved-start-16" value="shashemen">
+                shashemen
+              </option>
+              <option class="reserved-start-17" value="wolayita">
+                wolayita
+              </option>
+              <option class="reserved-start-18" value="woldiya">woldiya</option>
+              <option class="reserved-start-19" value="wollo">wollo</option>
+            </select>
+            <label for="select-reserved-destiny">to</label>
+            <select
+              id="select-resered-destiny"
+              class="select-resered-destiny"
+              required
+            >
+              <option value="">choose destination</option>
+              <option class="resered-destiny-1" value="adama">adama</option>
+              <option class="resered-destiny-2" value="Addis abeba">
+                Addis abeba
+              </option>
+              <option class="resered-destiny-3" value="adigrat">adigrat</option>
+              <option class="resered-destiny-4" value="ambo">ambo</option>
+              <option class="resered-destiny-5" value="asosa">asosa</option>
+              <option class="resered-destiny-6" value="Bahir dar">
+                Bahir dar
+              </option>
+              <option class="resered-destiny-7" value="debre brehan">
+                debre brehan
+              </option>
+              <option class="resered-destiny-8" value="debre markos">
+                debre markos
+              </option>
+              <option class="resered-destiny-9" value="debre tabor">
+                debre tabor
+              </option>
+              <option class="resered-destiny-10" value="dese">dese</option>
+              <option class="resered-destiny-11" value="Gondar">Gondar</option>
+              <option class="resered-destiny-12" value="hawassa">
+                hawassa
+              </option>
+              <option class="resered-destiny-13" value="jima">jima</option>
+              <option class="resered-destiny-14" value="mekele">mekele</option>
+              <option class="resered-destiny-15" value="nekemte">
+                nekemte
+              </option>
+              <option class="resered-destiny-16" value="shashemen">
+                shashemen
+              </option>
+              <option class="resered-destiny-17" value="wolayita">
+                wolayita
+              </option>
+              <option class="resered-destiny-18" value="woldiya">
+                woldiya
+              </option>
+              <option class="resered-destiny-19" value="wollo">wollo</option>
+            </select>
+            <button class="see btn">see</button>
+          </form>
+        </div>
+        <p class="message-list"></p>
+        <div class="movements-rows"></div>
+      </div>
+    </main>
+    <script src="bus-station.js"></script>
+  </body>
+</html>

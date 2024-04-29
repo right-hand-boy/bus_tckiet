@@ -1,0 +1,1048 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  /* background-color: darkslategrey;
+    background-image: linear-gradient(to left, skyblue, darkslategrey);
+    */
+  display: inline;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+main {
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: currentColor;
+  text-transform: capitalize;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: cadetblue;
+}
+
+.navigation-secondary,
+.navigation {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navigation-secondary {
+  justify-content: space-between;
+  padding: 1.2rem;
+  padding-left: 6.4rem;
+  align-items: center;
+  display: flex;
+  background-color: lightcyan;
+  font-size: 1.8rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.nav li:hover {
+  cursor: pointer;
+}
+
+.sticky {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.navigation-secondary a,
+.navigation a {
+  font-size: 1.8rem;
+  padding: 1.2rem;
+  color: rgb(248, 248, 248);
+  text-decoration: none;
+  text-transform: capitalize;
+  list-style: none;
+}
+
+.menu-icon {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  width: 4.9rem;
+}
+
+section {
+  position: relative;
+}
+
+select {
+  text-transform: capitalize;
+}
+
+.modal1,
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* max-width: 60rem; */
+  width: 50%;
+  background-color: #f3f3f3;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+  padding: 3.2rem;
+}
+
+.menu-icon:hover,
+.menu-icon:active {
+  cursor: pointer;
+}
+
+.menu-icon img {
+  width: 100%;
+}
+
+.btn,
+.btn:visited {
+  border-radius: 1.2rem;
+  align-self: end;
+  font-size: 1.8rem;
+  padding: 1.2rem 3.2rem;
+  color: black;
+  text-decoration: none;
+  text-transform: capitalize;
+  background-color: #078f30;
+  font-weight: 500;
+}
+
+.btn:active,
+.btn:hover {
+  cursor: pointer;
+  border-radius: 1.2rem;
+  background-color: rgb(123, 255, 0);
+}
+
+.logo {
+  font-size: 4.4rem;
+  font-weight: 900;
+  color: white;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.logo-pic {
+  height: 5rem;
+  margin-right: 0;
+  margin-left: 8rem;
+}
+.icon-close {
+  width: 5rem;
+  height: 5rem;
+}
+.menu-icon {
+  width: 5rem;
+  height: 5rem;
+}
+/***/
+.main-page {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.headding {
+  text-align: start;
+  background: none;
+  font-size: 3.4rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 0%;
+  display: none;
+}
+.close-modal {
+  display: none;
+}
+
+.close-modal1,
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8rem;
+  font-size: 4rem;
+}
+
+.seat-number {
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.info {
+  color: deepskyblue;
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+.main-page li:hover,
+.main-page li:active {
+  cursor: pointer;
+}
+
+.naa li:hover {
+  cursor: pointer;
+}
+
+.naa {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.main-page li {
+  border-radius: 0.9rem;
+  width: fit-content;
+  color: black;
+  list-style: none;
+}
+
+.fee {
+  font-size: 2.4rem;
+  padding-left: 9.6rem;
+  background: none;
+  display: block;
+  grid-column: 1/-1;
+}
+
+.to-reserve form {
+  text-transform: capitalize;
+  padding: 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.8rem;
+  gap: 3.2rem;
+  align-items: end;
+}
+
+.to-reserve {
+  background-color: azure;
+  padding-bottom: 3.2rem;
+  margin: 3.2rem;
+}
+
+.form {
+  background-color: azure;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.514);
+  padding-bottom: 4.8rem;
+}
+
+.p {
+  display: flex;
+  justify-content: space-between;
+  gap: 9.6rem;
+}
+
+main form label {
+  font-size: 2.4rem;
+}
+
+form select,
+main form input {
+  margin-top: 1.2rem;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  border-radius: 1.2rem;
+  background-color: silver;
+  border: none;
+  display: block;
+  width: 100%;
+}
+
+.btn--ticket {
+  display: block;
+  margin: 0 auto;
+  margin-top: 3.2rem;
+  padding: 1.2rem 3.2rem;
+}
+
+.seat-number {
+  color: red;
+}
+
+.user-details {
+  box-shadow: 0 1rem 1rem #00000040;
+  background-color: aliceblue;
+
+  padding: 3.2rem;
+  font-size: 2.4rem;
+  display: grid;
+  row-gap: 6.4rem;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 9.6rem;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.caution {
+  color: orangered;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.finish {
+  padding: 1.2rem 3.2rem;
+  display: block;
+  width: max-content;
+  grid-column: 1/-1;
+  /* align-self: center; */
+  justify-self: center;
+}
+
+svg {
+  font-size: 3rem;
+}
+
+.social {
+  grid-column: 1/-1;
+  display: flex;
+}
+
+.user {
+  padding: 0;
+  margin: 5% auto;
+}
+
+.search form input:focus-visible {
+  border: none;
+}
+
+.search form input {
+  padding: 0.6rem;
+  border-radius: 1.2rem;
+  border: none;
+  font-size: 1.6rem;
+}
+
+.user-payment-code::after {
+  content: "expire after 2 hours";
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: serif;
+  color: orangered;
+  line-height: 1.8;
+}
+
+/*footer*/
+.fo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.fo a {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  color: rgb(253, 253, 253);
+  background: none;
+}
+
+.footer {
+  font-size: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5rem;
+  color: white;
+  background-color: #020202ad;
+  padding: 1rem 5rem;
+  line-height: 1.7;
+}
+
+.footer-header {
+  border-bottom: 1px black solid;
+}
+
+/*hero*/
+.hero {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: auto;
+  justify-content: start;
+}
+
+.header-info {
+  padding: 0 4.8rem;
+  line-height: 1.6;
+  font-size: 2.4rem;
+  margin: 3.2rem;
+  margin-top: 1.2rem;
+}
+
+.overlayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.img {
+  width: 100%;
+  padding: 6.4rem;
+  transition: all 0.3s;
+}
+
+.hero-img-box {
+  overflow: hidden;
+}
+
+.img:hover,
+.img:active {
+  width: 100%;
+  align-self: center;
+}
+svg {
+  width: 2rem;
+  fill: white;
+  display: inline-block;
+  height: 2rem;
+  align-self: center;
+}
+.primary li {
+  display: flex;
+}
+/*about*/
+
+.tertialy-heading {
+  margin-left: 3.2rem;
+  font-size: 3rem;
+  margin-bottom: 3.2rem;
+  color: #343a40;
+  text-align: start;
+  text-transform: capitalize;
+}
+
+.primary-heading {
+  font-size: 3rem;
+  margin-bottom: 3.2rem;
+  color: #343a40;
+  text-align: center;
+}
+
+.about-info {
+  font-size: 1.8rem;
+  letter-spacing: 0.75;
+  line-height: 1.8;
+  margin-bottom: 3.2rem;
+}
+
+.about-list {
+  text-align: center;
+  list-style: none;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/*feauterd and prici*/
+
+.pric-img-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 3.2rem;
+  overflow: hidden;
+}
+
+.feauterd-prici-container {
+  padding-top: 6.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6.4rem;
+  background-color: azure;
+  padding: 4.8rem;
+}
+
+.feau-logo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-around;
+  gap: 0;
+}
+
+.pric-img {
+  max-width: 20rem;
+  transform: scale(0.5);
+}
+
+.secondary-heading {
+  font-size: 3rem;
+  color: #343a40;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 6.4rem;
+}
+
+/* ********** */
+/* about */
+.b {
+  display: flex;
+  gap: 10rem;
+  overflow: hidden;
+}
+
+.aboutt {
+  position: relative;
+}
+
+.head p {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+
+button {
+  background-color: rgba(255, 0, 0, 0.445);
+  border: none;
+}
+
+.aboutt button {
+  display: block;
+  width: max-content;
+  margin: 3.2rem auto;
+  background-color: rgba(255, 0, 0);
+  padding: 1.2rem 3.2rem;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+
+.head p {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 4.4rem;
+  text-transform: uppercase;
+  margin-bottom: 3.2rem;
+  text-align: center;
+  color: white;
+}
+
+.head {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.493),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(./image/IMG_20231112_193656_203\ -\ Copy.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 12rem;
+}
+
+.ppp p,
+.pp p {
+  font-size: 2rem;
+  margin-bottom: 3.2rem;
+  opacity: 0.85;
+  line-height: 1.8;
+}
+
+.ppp,
+.pp {
+  width: 81%;
+  padding: 1.2rem 6.4rem;
+}
+
+.ppp {
+  background-color: white;
+  color: black;
+}
+
+.hero {
+  background-color: darkslategrey;
+  background-image: linear-gradient(to left, skyblue, darkslategrey);
+}
+
+.pp {
+  color: white;
+  position: relative;
+}
+
+.infop p {
+  line-height: 1.7;
+  margin: 0 auto;
+  margin-bottom: 1.2rem;
+  font-size: large;
+}
+
+.infoo p:first-child {
+  font-style: italic;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+  font-size: 2.4rem;
+  opacity: 1;
+}
+
+.pp::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.747);
+  width: 120%;
+  height: 110%;
+  top: -0.8rem;
+  left: -6rem;
+  z-index: -1;
+  transform: skewX(-7deg);
+}
+
+/* ********** */
+h1 {
+  font-size: 4.4rem;
+  padding-top: 1.2rem;
+  padding: 4.8rem;
+  padding-top: 1.2rem;
+  margin-top: 2.4rem;
+  color: #212529;
+}
+
+.signup:hover,
+.signup:active,
+.login:hover,
+.login:active {
+  cursor: pointer;
+}
+
+.blur {
+  filter: blur(0.3rem);
+}
+
+.close-modal1,
+.close-modal,
+.close-modal2 {
+  cursor: pointer;
+}
+
+.close-modal1,
+.close-modal2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8rem;
+  font-size: 4rem;
+}
+
+.containar {
+  background-color: bisque;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  padding: 4.8rem;
+  position: relative;
+}
+
+.modal1 form,
+.modal form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.shopping-btn,
+.shopping-btn:link,
+.shopping-btn:visited {
+  background-color: rgb(123, 255, 0);
+  border-radius: 1.2rem;
+  align-self: end;
+  font-size: 1.8rem;
+  padding: 1.2rem 3.2rem;
+  color: black;
+  text-decoration: none;
+  text-transform: capitalize;
+  grid-column: 1/-1;
+  width: max-content;
+  justify-self: center;
+}
+
+.shopping-btn:active,
+.shopping-btn:hover {
+  background-color: #078f30;
+  border-radius: 1.2rem;
+}
+
+.modal1 form input,
+.modal form input {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.modal form label,
+.modal1 form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+/*hero*/
+
+.list {
+  background-color: white;
+  text-transform: capitalize;
+}
+
+.movements {
+  display: grid;
+  grid-template-columns: 4fr 4fr;
+  grid-template-rows: auto auto auto 1fr;
+  gap: 2rem;
+}
+
+.movements-rows {
+  display: grid;
+  grid-template-rows: auto;
+  grid-row: 1/4;
+  font-size: 1.2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+
+.sort {
+  font-size: 2.4rem;
+  align-self: end;
+}
+
+.movements-row {
+  padding: 2.4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1.5fr) 1fr 2fr;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #00000038;
+}
+
+.list label {
+  font-size: 2.4rem;
+}
+
+.sel {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  width: 50%;
+}
+
+.select-reserved-start {
+  grid-column: 1/-1;
+  font-size: 2.4rem;
+  justify-self: center;
+  padding: 1.2rem;
+  margin-right: auto;
+  align-self: center;
+}
+
+.list select {
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  border-radius: 1.2rem;
+  background-color: silver;
+  border: none;
+  display: block;
+  width: 100%;
+}
+
+.message {
+  font-size: medium;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: red;
+  align-self: end;
+}
+
+.user-name {
+  border-radius: 50%;
+  background-color: bisque;
+  width: 5rem;
+  height: 4rem;
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+.user- {
+  font-size: 2rem;
+}
+
+.log-out {
+  list-style: none;
+  font-size: 1.8rem;
+}
+
+.sign-in {
+  padding: 0 3.2rem;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.movements-payment-code {
+  font-size: 2rem;
+}
+
+.movements-type {
+  padding: 0.1rem 1rem;
+  border-radius: 10rem;
+  font-weight: 500;
+  color: #fff;
+  margin-right: 2rem;
+}
+
+.movements-to {
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+}
+
+.movements-from {
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  background: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+.movements-row p {
+  font-size: 1.8rem;
+  margin-right: 1.2rem;
+}
+
+.movements-row span {
+  font-size: 1.8rem;
+  margin-left: 1.2rem;
+}
+
+.passenger-name {
+  font-size: 2rem;
+}
+
+.list-con {
+  display: flex;
+  column-gap: 9.6rem;
+  padding: 1.2rem 3.2rem;
+}
+
+/*******************/
+/***nav****/
+/*******************/
+@media (max-width: 900px) {
+  html {
+    font-size: 35.25%;
+  }
+
+  .user-details {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    grid-template-columns: auto;
+  }
+
+  .feau-logo,
+  .pric-img-box {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 38em) {
+  html {
+    font-size: 28.25%;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .logo {
+    margin-left: 8rem;
+  }
+
+  .user-details {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    grid-template-columns: auto;
+  }
+
+  .b {
+    display: block;
+  }
+
+  .ppp,
+  .pp {
+    width: 100%;
+  }
+
+  .modal1,
+  .modal {
+    width: 80%;
+  }
+
+  .list label {
+    align-self: center;
+  }
+
+  .sel {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .to-reserve form {
+    grid-template-columns: auto;
+  }
+
+  .list-con {
+    display: grid;
+    /* column-gap: 9.6rem; */
+    padding: 0 3.2rem;
+  }
+
+  .modal,
+  .modal1 {
+    top: 25%;
+  }
+
+  .see {
+    width: max-content;
+    margin-left: auto;
+  }
+
+  .feau-logo,
+  .pric-img-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .hero {
+    grid-template-columns: auto;
+  }
+
+  .feauterd-prici-container {
+    grid-template-columns: auto;
+  }
+
+  .modal-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+  }
+
+  .img {
+    padding: 6.4rem;
+  }
+
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .containar-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-page {
+    height: 93.8vh;
+  }
+
+  .close-modal {
+    display: block;
+  }
+
+  .headding {
+    display: block;
+  }
+
+  .main-page li {
+    color: black;
+  }
+
+  .naa {
+    display: none;
+  }
+
+  .main-page {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    font-size: 2.4rem;
+    align-items: start;
+    list-style: none;
+    width: 50%;
+    height: 100vh;
+    padding: 3.2rem;
+    background-color: azure;
+    opacity: 0.85;
+    position: absolute;
+    padding-top: 8%;
+    top: 0;
+    left: 0;
+  }
+
+  .headding {
+    text-align: start;
+    background: none;
+    font-size: 3.4rem;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    padding: 0%;
+    display: block;
+  }
+
+  .close-modal {
+    display: block;
+  }
+
+  .movements-row {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 3rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
